@@ -1,5 +1,4 @@
-
 export interface Product {
-  tarrifName: string;
+  tariffName: string;
   annualCost: number;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { TarrifServiceService } from "../services/tarrifService.service";
+import { TariffServiceService } from "../services/tarrifService.service";
 import { map } from "rxjs/operators";
 import { Product } from "../models/product";
 import { NgForm } from "@angular/forms";
@@ -13,18 +13,17 @@ import { AlertifyService } from "../services/alertify.service";
 })
 export class TariffComparisonComponent implements OnInit {
   listProduct: Product[];
-  displayedColumns: string[] = ["tarrifName", "annualCost"];
+  displayedColumns: string[] = ["tariffName", "annualCost"];
   dataSource: Product[];
   comparison: number;
   constructor(
-    private tarrifSrv: TarrifServiceService,
+    private tariffSrv: TariffServiceService,
     private alertify: AlertifyService
   ) {}
 
   ngOnInit() {}
-
   calculate(form: NgForm) {
-    this.tarrifSrv.getProductList(form.value.consumption).subscribe(
+    this.tariffSrv.getProductList(form.value.consumption).subscribe(
       args => {
         this.dataSource = args;
       },

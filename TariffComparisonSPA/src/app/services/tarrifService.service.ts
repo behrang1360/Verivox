@@ -6,14 +6,14 @@ import { Product } from "../models/product";
 @Injectable({
   providedIn: "root"
 })
-export class TarrifServiceService implements OnInit {
+export class TariffServiceService implements OnInit {
   constructor(private http: HttpClient) {}
   ngOnInit(): void {}
 
   getProductList(value: number): Observable<Product[]> {
     return this.http.get<Product[]>(
-      `http://localhost:5000/ProductTarrifComparison/${value}`
+      `http://localhost:5000/ProductTariffComparison/${value}`
     );
   }
-  
+
 }

@@ -11,14 +11,14 @@ namespace TariffComparisonApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProductTarrifComparisonController : ControllerBase
+    public class ProductTariffComparisonController : ControllerBase
     { 
 
-        private readonly ILogger<ProductTarrifComparisonController> _logger;
+        private readonly ILogger<ProductTariffComparisonController> _logger;
         private readonly IProductService _productService;
 
-        public ProductTarrifComparisonController(
-            ILogger<ProductTarrifComparisonController> logger,
+        public ProductTariffComparisonController(
+            ILogger<ProductTariffComparisonController> logger,
            IProductService productService
 
         )
