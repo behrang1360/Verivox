@@ -28,10 +28,10 @@ namespace TariffComparisonApi.Controllers
         }
 
 
-        [HttpGet("{id}")]
-        public IEnumerable<ProductDto> GetProductList(float id)
+        [HttpGet("{consumption}")]
+        public IEnumerable<ProductDto> GetProductList(float consumption)
         {
-            var list = _productService.GetProductList(id);
+            var list = _productService.GetProductList(consumption);
             return list;
         }
     }
