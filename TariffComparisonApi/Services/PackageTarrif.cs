@@ -20,7 +20,7 @@ namespace TariffComparisonApi.Services
         public override float Calculate(float consumption)
         {
             if (consumption <= 0)
-                throw new Exception("Input value cannot be less than zero");
+                throw new Exception("Input value cannot be less than one");
 
             if (consumption <= baseConsumption)
                 return fixedPrice;

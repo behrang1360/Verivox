@@ -20,7 +20,7 @@ namespace TariffComparisonApi.Services
         public override float Calculate(float consumption)
         {
             if (consumption <= 0)
-                throw new Exception("Consumption cann't be less than zero");
+                throw new Exception("Consumption cann't be less than one");
 
             float charge = monthCount * monthlyCharge;
             float kwhPrice = (consumption * kwhCost) / 100;
