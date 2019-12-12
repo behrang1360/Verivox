@@ -12,17 +12,17 @@ namespace TariffComparisonApi.Services
 
             List<ProductDto> results = new List<ProductDto>();
 
-            BasicTarrif basicTarrif = new BasicTarrif();
-            basicTarrif.Name = "Basic electricity tariff";
-            var basicTarrif_annualCost = basicTarrif.Calculate(consumption);
+            BasicTariff basicTariff = new BasicTariff();
+            basicTariff.Name = "Basic electricity tariff";
+            var basicTariff_annualCost = basicTariff.Calculate(consumption);
 
-            results.Add(new ProductDto { TarrifName = basicTarrif.Name, AnnualCost = basicTarrif_annualCost });
+            results.Add(new ProductDto { TariffName = basicTariff.Name, AnnualCost = basicTariff_annualCost });
 
-            PackageTarrif packageTarrif = new PackageTarrif();
-            packageTarrif.Name = "Packaged tariff";
-            var packageTarrif_annualCost = packageTarrif.Calculate(consumption);
+            PackageTariff packageTariff = new PackageTariff();
+            packageTariff.Name = "Packaged tariff";
+            var packageTariff_annualCost = packageTariff.Calculate(consumption);
 
-            results.Add(new ProductDto { TarrifName = packageTarrif.Name, AnnualCost = packageTarrif_annualCost });
+            results.Add(new ProductDto { TariffName = packageTariff.Name, AnnualCost = packageTariff_annualCost });
 
             return results.OrderBy(c => c.AnnualCost).ToList();
         }

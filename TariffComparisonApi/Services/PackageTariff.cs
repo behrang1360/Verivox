@@ -2,7 +2,7 @@ using System;
 
 namespace TariffComparisonApi.Services
 {
-  public sealed class PackageTarrif : TarrifCalculation, IProduct
+  public sealed class PackageTariff : TarrifCalculation, IProduct
     {
         public string Name { get; set; }
 
@@ -10,7 +10,7 @@ namespace TariffComparisonApi.Services
         private readonly float kwhCost;
         private readonly float fixedPrice;
 
-        public PackageTarrif()
+        public PackageTariff()
         {
             baseConsumption = 4000;
             kwhCost = 30;

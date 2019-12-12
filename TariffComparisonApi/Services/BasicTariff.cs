@@ -2,7 +2,7 @@ using System;
 
 namespace TariffComparisonApi.Services
 {
-  public sealed class BasicTarrif : TarrifCalculation, IProduct
+  public sealed class BasicTariff : TarrifCalculation, IProduct
     {
         public string Name { get; set; }
 
@@ -10,7 +10,7 @@ namespace TariffComparisonApi.Services
         private readonly int monthCount;
         private readonly float kwhCost;
 
-        public BasicTarrif()
+        public BasicTariff()
         {
             monthlyCharge = 5;
             monthCount = 12;
