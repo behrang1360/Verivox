@@ -11,7 +11,7 @@
           placeholder="Consumption(kWh/year)"
         />
       </mat-form-field>
-      <button mat-button>Calculate</button>
+      <button mat-button [disabled]="f.invalid">Calculate</button>
     </form>
   </mat-card-actions>
   <mat-card-content>
